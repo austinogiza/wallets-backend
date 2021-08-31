@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.conf import settings
+from .models import Contact
 # Create your views here.
 
 
