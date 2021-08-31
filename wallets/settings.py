@@ -9,7 +9,7 @@ SECRET_KEY = 'django-insecure-(9r_x70tj)v*o^iad%yz%uzgl1r1bmn)j90yw@!#cq3mg_eg4d
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['api.wallet.surgery', 'www.api.wallet.surgery']
+ALLOWED_HOSTS = ['api2.wallet.surgery', 'www.api2.wallet.surgery']
 
 # Application definition
 
@@ -59,18 +59,29 @@ WSGI_APPLICATION = 'wallets.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         # 'ENGINE': 'django.db.backends.postgresql',
+#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'wallets',
+#         "USER": "postgres",
+#         "PORT":"",
+#         "HOST":"localhost",
+#         "PASSWORD":"austinforreal"
+#     }
+# }
+
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.postgresql',
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'wallets',
-        "USER": "postgres",
+        'NAME': 'wallet',
+        "USER": "wallet",
         "PORT":"",
         "HOST":"localhost",
-        "PASSWORD":"austinforreal"
+        "PASSWORD":"wallet"
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -148,6 +159,8 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
+    "https://wallet.surgery",
+    "https://www.wallet.surgery"
 
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
