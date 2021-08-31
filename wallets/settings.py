@@ -8,8 +8,8 @@ SECRET_KEY = 'django-insecure-(9r_x70tj)v*o^iad%yz%uzgl1r1bmn)j90yw@!#cq3mg_eg4d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['api.wallet.surgery', 'www.api.wallet.surgery']
 
 # Application definition
 
@@ -61,7 +61,8 @@ WSGI_APPLICATION = 'wallets.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        # 'ENGINE': 'django.db.backends.postgresql',
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'wallets',
         "USER": "postgres",
         "PORT":"",
@@ -147,8 +148,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
-    'https://grabbofertilityclinic.com',
-    'https://www.grabbofertilityclinic.com'
+
 ]
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST =  'smtp.zoho.com'
